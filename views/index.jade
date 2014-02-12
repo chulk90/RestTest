@@ -1,5 +1,11 @@
 extends layout
 
-block content
+block jackson
   h1= title
-  p Welcome to #{title}
+  p Welcome to
+    |Me
+  form(id="sdf", method="POST", action="/books")
+    input(name="name")
+    input(name="author")
+    input(name="copy")
+    input(type="submit", value="Submit")
